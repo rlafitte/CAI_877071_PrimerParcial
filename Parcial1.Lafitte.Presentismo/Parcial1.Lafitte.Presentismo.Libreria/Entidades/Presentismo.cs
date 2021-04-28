@@ -52,17 +52,27 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
         }
         public void AgregarAsistencia(List<Asistencia> _asist)
         {
+            Asistencia a = new Asistencia();
+            a.EstaPresente = true;
+            //a.Alumno = this.
+            //foreach(Asistencia a in _asist)
+            //{
+            //    a.EstaPresente = true;
+                _asistencias.Add(a);
+            //}
 
         }
         public List<Asistencia> GetAsistenciasPorFecha(string fecha)
         {
-            List<Asistencia> _subasistencia = new List<Asistencia>();
-            foreach (Asistencia a in _asistencias)
-            {
-                if (a.FechaAsistencia1 == fecha)
-                    _subasistencia.Add(a);
-            }
-            return _subasistencia;
+            //List<Asistencia> _subasistencia = new List<Asistencia>();
+            //foreach (Asistencia a in _asistencias)
+            //{
+            ////    if (a.FechaAsistencia1 == fecha)
+            //        _subasistencia.Add(a);
+            //_asistencias.Add();
+            //}
+            //return _subasistencia;
+            return _asistencias;
         }
 
     }

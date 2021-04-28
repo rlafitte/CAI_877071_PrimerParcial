@@ -80,7 +80,11 @@ namespace Parcial1.Lafitte.Presentismo.Consola
                 if (a is AlumnoRegular)
                 {
                 Console.WriteLine(a.Apellido + "está presente?");
-
+                    _presentismo.AgregarAsistencia(_presentismo.GetAsistenciasPorFecha(s));
+                }
+                else
+                {
+                    Console.WriteLine("El alumno " + a.ToString() + " es Oyente");
                 }
 
             }

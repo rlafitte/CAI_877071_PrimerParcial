@@ -17,5 +17,9 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
             return $"{this.Nombre} ({this.Registro})";
             //throw new NotImplementedException();
         }
+        public string ToString()
+        {
+            return this.Display();
+        }
     }
 }
