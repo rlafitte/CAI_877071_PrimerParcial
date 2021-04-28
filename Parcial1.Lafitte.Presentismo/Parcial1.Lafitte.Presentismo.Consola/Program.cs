@@ -72,9 +72,18 @@ namespace Parcial1.Lafitte.Presentismo.Consola
             //Ingreso fecha
             string s = Console.ReadLine();
 
-            Console.WriteLine(_presentismo.GetListaAlumnos());
+            //Console.WriteLine(_presentismo.GetListaAlumnos());
             // Listar los alumnos
-            
+            foreach (Alumno a in _presentismo.GetListaAlumnos())
+            {
+
+                if (a is AlumnoRegular)
+                {
+                Console.WriteLine(a.Apellido + "está presente?");
+
+                }
+
+            }
             // para cada alumno solo preguntar si está presente
                 // agrego la lista de asistencia
                 // Error: mostrar el error y que luego muestre el menú nuevamente
