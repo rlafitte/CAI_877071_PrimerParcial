@@ -11,6 +11,10 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
         List<Alumno> _alumnos;
         List<Asistencia> _asistencias;
         List<Preceptor> _preceptores;
+        private bool _ejecuta;
+
+        public bool Ejecuta { get => _ejecuta; set => _ejecuta = value; }
+
         public Presentismo()
         {
             _alumnos = new List<Alumno>();
@@ -24,6 +28,8 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
             _alumnos.Add(new AlumnoRegular(124, "Carla", "Jaime", "carla@gmail.com"));
             _alumnos.Add(new AlumnoOyente(320, "Ramona", "Vals"));
             _alumnos.Add(new AlumnoOyente(321, "Alejandro", "Medina"));
+
+            Ejecuta = true;
         }
         public bool AsistenciaRegistrada(string fecha)
         {
@@ -49,7 +55,13 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
         }
         public List<Asistencia> GetAsistenciasPorFecha(string fecha)
         {
-            return _asistencias; //revisar
+            List<Asistencia> _subasistencia = new List<Asistencia>();
+            foreach (Asistencia a in _asistencias)
+            {
+                if (a.FechaAsistencia1 == fecha)
+                    _subasistencia.Add(a);
+            }
+            return _subasistencia;
         }
 
     }

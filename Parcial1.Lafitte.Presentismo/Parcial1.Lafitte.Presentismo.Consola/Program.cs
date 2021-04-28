@@ -21,9 +21,27 @@ namespace Parcial1.Lafitte.Presentismo.Consola
             static void Main(string[] args)
             {
                 Preceptor preceptorActivo = _presentismo.GetPreceptorActivo();
+                Controlador C = new Controlador();
+
+            while (_presentismo.Ejecuta)
+            {
 
                 DesplegarOpcionesMenu();
                 string opcionMenu = ""; // pedir el valor
+                try
+                {
+                    C.IngresoValido(Console.ReadLine(), out opcionMenu);
+                }
+                catch (OperacionInvalida op)
+                {
+                    Console.WriteLine(op.Message);
+
+                }
+                catch(ValorNoNumerico va)
+                {
+                    Console.WriteLine(va.Message);
+                }
+                
                 switch (opcionMenu)
                 {
                     case "1":
@@ -33,11 +51,13 @@ namespace Parcial1.Lafitte.Presentismo.Consola
                         MostrarAsistencia();
                         break;
                     case "X":
-                        // SALIR
+                        Salir();
                         break;
                     default:
                         break;
                 }
+            }
+
             }
             static void DesplegarOpcionesMenu()
             {
@@ -47,7 +67,9 @@ namespace Parcial1.Lafitte.Presentismo.Consola
             }
             static void TomarAsistencia(Preceptor p)
             {
-                // Ingreso fecha
+            Console.WriteLine("Ingrese fecha a buscar");
+                
+            //Ingreso fecha
                 // Listar los alumnos
                 // para cada alumno solo preguntar si está presente
                 // agrego la lista de asistencia
@@ -55,13 +77,16 @@ namespace Parcial1.Lafitte.Presentismo.Consola
             }
             static void MostrarAsistencia()
             {
-                // ingreso fecha
-                // muestro el toString de cada asistencia
-            }
-        }
+            // ingreso fecha
+            // muestro el toString de cada asistencia
+            string s = Console.ReadLine();
+            _presentismo.GetAsistenciasPorFecha(s);
 
-        static void Main(string[] args)
+            }
+        static void Salir()
         {
+            _presentismo.Ejecuta = false;
+        }
         }
     
 }

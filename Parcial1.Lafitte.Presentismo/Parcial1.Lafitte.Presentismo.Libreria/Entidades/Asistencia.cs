@@ -14,11 +14,12 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
         private Alumno _alumno;
         private bool _estaPresente;
 
-        public string FechaAsistencia1 { get => _fechaAsistencia; set => _fechaAsistencia = value; }
+
         public DateTime FechaHoraReal { get => _fechaHoraReal; set => _fechaHoraReal = value; }
         public Preceptor Preceptor { get => _preceptor; set => _preceptor = value; }
         public Alumno Alumno { get => _alumno; set => _alumno = value; }
         public bool EstaPresente { get => _estaPresente; set => _estaPresente = value; }
+        public string FechaAsistencia1 { get => _fechaAsistencia; set => _fechaAsistencia = value; }
 
         public string FechaAsistencia()
         {
