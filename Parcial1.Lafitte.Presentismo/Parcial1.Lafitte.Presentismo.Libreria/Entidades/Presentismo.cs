@@ -45,9 +45,16 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
             aux = _preceptores.FirstOrDefault(o => o.Activo == true);
             return aux;
         } 
-        public List<Alumno> GetListaAlumnos()
+        public string GetListaAlumnos()
         {
-            return _alumnos; //revisar
+            string msg = "";
+            List<Alumno> _subasistencia = new List<Alumno>();
+            foreach (Alumno a in _alumnos)
+            {
+                msg += a.Display() + Environment.NewLine;
+            }
+            return msg;
+
         }
         public void AgregarAsistencia(List<Asistencia> _asist)
         {

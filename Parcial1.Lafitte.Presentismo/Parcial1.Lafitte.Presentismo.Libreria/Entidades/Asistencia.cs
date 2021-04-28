@@ -26,7 +26,7 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
             string msg = "";
             return msg;
         }
-        public string ToString()
+        public override string ToString()
         {
             //            Asistencia "FECHAREFERENCIA {ALUMNO FORMATEADO} está " +
             //              "presente {SI o NO} por {PRECEPTOR FORMATEADO} registrado el {FECHAHORAREAL}"

@@ -67,11 +67,15 @@ namespace Parcial1.Lafitte.Presentismo.Consola
             }
             static void TomarAsistencia(Preceptor p)
             {
-            Console.WriteLine("Ingrese fecha a buscar");
-                
+
+            Console.WriteLine("Ingrese fecha a chequear");
             //Ingreso fecha
-                // Listar los alumnos
-                // para cada alumno solo preguntar si está presente
+            string s = Console.ReadLine();
+
+            Console.WriteLine(_presentismo.GetListaAlumnos());
+            // Listar los alumnos
+            
+            // para cada alumno solo preguntar si está presente
                 // agrego la lista de asistencia
                 // Error: mostrar el error y que luego muestre el menú nuevamente
             }
@@ -79,6 +83,7 @@ namespace Parcial1.Lafitte.Presentismo.Consola
             {
             // ingreso fecha
             // muestro el toString de cada asistencia
+            Console.WriteLine("Ingrese fecha a buscar");
             string s = Console.ReadLine();
             _presentismo.GetAsistenciasPorFecha(s);
 

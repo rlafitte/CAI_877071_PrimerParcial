@@ -11,6 +11,11 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
         private string _email;
         public AlumnoRegular(int i, string s1, string s2, string s3)
         {
+            this.Registro= i;
+            this.Nombre = s1;
+            this.Apellido = s2;
+            this.Email = s3;
+
 
         }
 
