@@ -13,5 +13,7 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
         {
 
         }
+
+        public string Email { get => _email; set => _email = value; }
     }
 }
