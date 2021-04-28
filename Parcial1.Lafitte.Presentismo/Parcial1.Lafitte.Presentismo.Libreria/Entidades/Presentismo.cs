@@ -25,6 +25,32 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
             _alumnos.Add(new AlumnoOyente(320, "Ramona", "Vals"));
             _alumnos.Add(new AlumnoOyente(321, "Alejandro", "Medina"));
         }
+        public bool AsistenciaRegistrada(string fecha)
+        {
+            return true;
+        }
+        public int GetCantidadAlumnosRegulares()
+        {
+            return _alumnos.Count(); //pendiente tomar solo los regulares
+        }
+        public Preceptor GetPreceptorActivo()
+        {
+            Preceptor aux = new Preceptor();
+            aux = _preceptores.FirstOrDefault(o => o.Activo == true);
+            return aux;
+        } 
+        public List<Alumno> GetListaAlumnos()
+        {
+            return _alumnos; //revisar
+        }
+        public void AgregarAsistencia(List<Asistencia> _asist)
+        {
+
+        }
+        public List<Asistencia> GetAsistenciasPorFecha(string fecha)
+        {
+            return _asistencias; //revisar
+        }
 
     }
 }
