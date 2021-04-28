@@ -10,11 +10,11 @@ namespace Parcial1.Lafitte.Presentismo.Consola
 
         public class Program
         {
-            private static Presentismo _presentismo;
+            private static Parcial1.Lafitte.Presentismo.Libreria.Entidades.Presentismo _presentismo;
 
             static Program()
             {
-                _presentismo = new Presentismo();
+                _presentismo = new Parcial1.Lafitte.Presentismo.Libreria.Entidades.Presentismo();
             }
             // modificar lo que corresponda para que solo finalice el
             // programa si el usuario presiona X en el menú

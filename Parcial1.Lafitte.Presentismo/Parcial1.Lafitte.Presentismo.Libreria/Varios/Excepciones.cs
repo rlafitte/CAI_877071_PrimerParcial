@@ -34,5 +34,9 @@ namespace Libreria
     public class AsistenciaInconsistenteException: Exception
     {
         public AsistenciaInconsistenteException() : base("Asistencia inconsistente.") { }
+    }    
+    public class SinAlumnosRegistradosException: Exception
+    {
+        public SinAlumnosRegistradosException() : base("No hay alumnos registrados.") { }
     }
 }

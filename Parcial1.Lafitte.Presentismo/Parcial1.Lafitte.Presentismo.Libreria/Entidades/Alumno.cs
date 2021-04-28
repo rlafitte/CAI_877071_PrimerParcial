@@ -12,9 +12,10 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
 
         public int Registro { get => _registro; set => _registro = value; }
 
-        public override string Display()
+        internal override string Display()
         {
-            throw new NotImplementedException();
+            return $"{this.Nombre} ({this.Registro})";
+            //throw new NotImplementedException();
         }
     }
 }

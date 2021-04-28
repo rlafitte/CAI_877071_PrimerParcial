@@ -1,0 +1,2 @@
+C:\Users\renar\Desktop\CAI\PrimerParcial\CAI_877071_PrimerParcial\Parcial1.Lafitte.Presentismo\Parcial1.Lafitte.Presentismo.Libreria\obj\Debug\Parcial1.Lafitte.Presentismo.Libreria.csprojAssemblyReference.cache
+C:\Users\renar\Desktop\CAI\PrimerParcial\CAI_877071_PrimerParcial\Parcial1.Lafitte.Presentismo\Parcial1.Lafitte.Presentismo.Libreria\obj\Debug\Parcial1.Lafitte.Presentismo.Libreria.csproj.CoreCompileInputs.cache
