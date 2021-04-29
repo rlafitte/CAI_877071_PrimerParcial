@@ -34,5 +34,9 @@ namespace Parcial1.Lafitte.Presentismo.Libreria.Entidades
 
 
         }
+        public Alumno DevuelveAlumno()
+        {
+            return this.Alumno;
+        }
     }
 }
